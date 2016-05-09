@@ -13,7 +13,7 @@ The MRT Data Reader and Geolocator were provided by IIT-CNR Pisa.
  For the graph creation we have used the VivaJS library.
  
  <h1>Screenshots</h1>
- ![Screenshot](1.jpg)
- ![Screenshot](2.jpg)
+ ![Screenshot](1.JPG)
+ ![Screenshot](2.JPG)
  
  
