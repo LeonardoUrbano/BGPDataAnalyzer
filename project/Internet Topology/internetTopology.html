@@ -1,0 +1,91 @@
+<!doctype html> 
+<html> 
+	<head>
+		<title>Internet Topology</title>
+		<meta name="author" content="Pietro De Rosa, Leonardo Urbano">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="./CSS/internetTopology.css" type="text/css">	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="VivaGraphJS/dist/vivagraph.js"></script>
+		<script type="text/javascript" src="ichartjs/ichart.1.2.1.min.js"></script>
+		<script type="text/javascript" src="javascript/ISOcode_mapping.js"></script>
+		<script type="text/javascript" src="javascript/MyPlot.js"></script>
+		<script type="text/javascript" src="javascript/MyGraph.js"></script>
+		<script type="text/javascript" src="javascript/internetTopology.js"></script>
+	</head>
+	<body>
+		<div id="graph1" class="graphContainer">
+			<div id="buttons">
+				<input type="button" onclick="addGraph()" value="+" title="Add a new graph/chart">
+				<input type="button" onclick="removeGraph()" value="-" title="Remove the 2nd graph and chart" disabled>
+			</div>
+			<div class="infoContainer">
+				<div>AS count: <span class="nodeC">0</span></div>
+				<div class="UTCtime">&nbsp;</div>
+		 		<div class="info">&nbsp;</div>
+		 	</div>
+			<div class="selectCountries">
+				<select class="select1" onChange = "changeCountries(this)">
+					<option value = "all countries">All Countries</option>
+				</select>
+			</div>
+			<div class="selectMode">
+				<select class="select2" onChange = "changeMode(this)">
+					<option value = "0" selected>IN OUT Mode</option>
+					<option value = "1">OUT Mode</option>
+					<option value = "2">IN Mode</option>
+				</select>
+			</div>
+			<div class="divViewCheckboxes">
+				<div><input type="checkbox" onclick="showHideGraph(0, this.checked)" checked>Show graph</div>
+				<div><input type="checkbox" onclick="showHideChart(0, this.checked)" checked>Show chart</div>
+			</div>
+  		</div>
+		<div id="chart1" class="chartContainer"></div>
+		<fieldset class="fieldsetTimeRadio">
+			<legend>Time resolution</legend>
+			<input type="radio" name="timeInterval1" onclick="changeTimeResolution(0, 1)" checked>sec
+			<input type="radio" name="timeInterval1" onclick="changeTimeResolution(0, 60)">min
+			<input type="radio" name="timeInterval1" onclick="changeTimeResolution(0, 3600)">h
+		</fieldset>
+		<fieldset class="fieldsetCurrentTime">
+			<legend>Current time</legend>
+			<div class="divCurrentTime">&nbsp;</div>
+		</fieldset>
+		
+		<div id="graph2" class="graphContainer">
+			<div class="infoContainer">
+				<div>AS count: <span class="nodeC">0</span></div>
+				<div class="UTCtime">&nbsp;</div>
+		 		<div class="info">&nbsp;</div>
+		 	</div>
+			<div class="selectCountries">
+				<select class="select1" onChange = "changeCountries(this)">
+					<option value = "all countries">All Countries</option>
+				</select>
+			</div>
+			<div class="selectMode">
+				<select class="select2" onChange = "changeMode(this)" disabled>
+					<option value = "0" selected>IN OUT Mode</option>
+					<option value = "1">OUT Mode</option>
+					<option value = "2">IN Mode</option>
+				</select>
+			</div>
+			<div class="divViewCheckboxes">
+				<div><input type="checkbox" onclick="showHideGraph(1, this.checked)" checked>Show graph</div>
+				<div><input type="checkbox" onclick="showHideChart(1, this.checked)" checked>Show chart</div>
+			</div>
+		</div>
+		<div id="chart2" class="chartContainer"></div>
+		<fieldset id="fieldsetTimeRadio2" class="fieldsetTimeRadio">
+			<legend>Time resolution</legend>
+			<input type="radio" name="timeInterval2" onclick="changeTimeResolution(1, 1)" checked>sec
+			<input type="radio" name="timeInterval2" onclick="changeTimeResolution(1, 60)">min
+			<input type="radio" name="timeInterval2" onclick="changeTimeResolution(1, 3600)">h
+		</fieldset>
+		<fieldset class="fieldsetCurrentTime" id="fieldsetCurrentTime2">
+			<legend>Current time</legend>
+			<div class="divCurrentTime">&nbsp;</div>
+		</fieldset>
+	</body> 
+</html>
