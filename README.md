@@ -12,7 +12,7 @@ The MRT Data Reader and Geolocator were provided by IIT-CNR Pisa.
  While, at client side, it was developed a Javascript program that receives BGP data and so shows the Internet topology's AS-level graph.
  For the graph creation we have used the VivaJS library.
  
- <h1>Screenshots</h1>
+ ##Screenshots
  ![Screenshot](1.jpg)
  ![Screenshot](2.jpg)
  
